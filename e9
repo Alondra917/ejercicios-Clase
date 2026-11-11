@@ -1,0 +1,20 @@
+centinela = True
+
+while centinela == True:
+    horas = int(input("Introduzca el No. de horas laboradas (-1 para terminar): "))
+    
+    if horas == -1:
+        centinela = False
+    else:
+        pago = float(input("Introduzca el pago por hora del empleado: "))
+        salario = 0
+    
+        if horas <= 40:
+            salario = horas*pago
+            print(f"El salario es: ${salario}")
+        else:
+            salario = 40*pago
+            horas-= 40
+            salario = salario + horas*pago*1.5
+            print(f"El salario es: ${salario}")
+        print("")
