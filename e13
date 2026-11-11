@@ -1,0 +1,20 @@
+frase = input("Ingrese una palabra o frase: ")
+frase_normalizada = ""
+
+for char in frase:
+    if char.isalnum():
+        frase_normalizada += char.lower()
+
+es_palindromo = True
+longitud = len(frase_normalizada)
+
+for i in range(longitud // 2):
+    if frase_normalizada[i] != frase_normalizada[longitud - 1 - i]:
+        es_palindromo = False
+        break
+
+# Muestra el resultado
+if es_palindromo:
+    print("La frase es un palíndromo.")
+else:
+    print("La frase no es un palíndromo.")
