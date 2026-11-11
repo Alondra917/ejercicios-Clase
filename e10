@@ -1,0 +1,8 @@
+binario = int(input("Ingrese el numero binario: "))
+decimal = 0
+exponente = 0
+ogbinario = binario
+for digito in str(binario)[::-1]: 
+    decimal += int(digito) * (2 ** exponente)
+    exponente += 1
+print(f"El numero binario {ogbinario} en decimal es {decimal}") 
