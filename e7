@@ -1,0 +1,28 @@
+poblacion_actual = 8000000000  # Población mundial actual (8,000 millones)
+tasa_crecimiento = 0.0105  # Tasa de crecimiento anual (1.05%)
+poblacion = poblacion_actual
+
+
+print(f"{'Año':<5} {'Población':<15} {'Aumento':<15}")
+
+poblacion_doblada = poblacion_actual * 2
+poblacion_cuadruple = poblacion_actual * 4
+año_doblado = 0
+año_cuadruple = 0
+
+for año in range(1, 101):
+    aumento = poblacion * tasa_crecimiento
+    poblacion += aumento
+    
+    print(f"{año:<5} {int(poblacion):<15} {int(aumento):<15}")
+    
+    # Verificamos si la población se ha duplicado
+    if año_doblado == 0 and poblacion >= poblacion_doblada:
+        año_doblado = año
+    
+    # Verificamos si la población se ha cuadruplicado
+    if año_cuadruple == 0 and poblacion >= poblacion_cuadruple:
+        año_cuadruple = año
+
+print("\nAño en el que la población se duplicará:", año_doblado)
+print("Año en el que la población se cuadruplicará:", año_cuadruple)
