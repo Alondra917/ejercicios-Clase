@@ -1,0 +1,25 @@
+size = int(input("Introduce qué tan grande lo quieres: "))
+
+for i in range(1, size + 1):
+    # Patrón A
+    for j in range(i):
+        print('*', end='')
+    print(' ' * (size - i + 2), end='')  # Ajuste en el espacio
+
+    # Patrón B
+    for j in range(size - i + 1):
+        print('*', end='')
+    print(' ' * (i + 1), end='')  # Ajuste en el espacio
+
+    # Patrón C
+    print(' ' * (i - 1), end='')  
+    for j in range(size - i + 1):
+        print('*', end='')
+    print(' ' * 3, end='')
+
+    # Patrón D
+    print(' ' * (size - i), end='')  
+    for j in range(i):
+        print('*', end='')
+
+    print() 
