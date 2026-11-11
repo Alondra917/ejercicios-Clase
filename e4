@@ -1,0 +1,8 @@
+contador = 1
+
+for lado1 in range(1, 501):
+    for lado2 in range(lado1, 501):
+        for hipotenusa in range(lado2, 501): 
+            if lado1**2 + lado2**2 == hipotenusa**2:
+                print(f"{contador:2}: {lado1:3}² + {lado2:3}² = {hipotenusa:3}²")
+                contador += 1
