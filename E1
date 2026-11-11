@@ -1,0 +1,17 @@
+numero = int(input("Introduzca un numero natural para mostrar que posicion corresponde en la secuencia de Fibonacci: "))
+inicio, siguiente = 0, 1
+
+for i in range(numero):
+    if i == 0:
+        print(inicio, end=', ' if numero > 1 else '')
+    elif i == 1:
+        print(siguiente, end=', ' if numero > 2 else '')
+    else:
+        ac = inicio + siguiente
+        if i == numero - 1:
+            print(ac) 
+        else:
+            print(ac, end=', ')
+        inicio = siguiente
+        siguiente = ac
+
